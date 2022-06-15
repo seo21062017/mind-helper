@@ -324,3 +324,53 @@ body{
   overflow: hidden;
 }
 
+
+.fullscreen {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  &__body {
+    padding: 50px 15px;
+    background: rgba(0, 0, 0, 0.5);
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex: 1 1 auto;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    color: #ffffff;
+    font-size: 50px;
+    letter-spacing: 25px;
+    font-weight: 700;
+    margin: 0 0 20px 0;
+    @media (max-width: 768px){
+      font-size: 25px;
+      letter-spacing: 14px;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    font-size: 18px;
+    letter-spacing: 15px;
+    @media (max-width: 768px){
+      font-size: 10px;
+      letter-spacing: 7px;
+    }
+  }
+
+  &__video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -13,7 +13,9 @@ export const path = {
         css: `${buildFolder}/css/`,
         html: `${buildFolder}/`,
         fonts: `${buildFolder}/fonts/`,
-        files: `${buildFolder}/files/`
+        files: `${buildFolder}/files/`,
+        video: `${buildFolder}/video/`,
+        audio: `${buildFolder}/audio/`
 
     },
     src: {
@@ -23,6 +25,8 @@ export const path = {
         scss: `${srcFolder}/scss/style.scss`,
         html: `${srcFolder}/*.html`,
         files: `${srcFolder}/files/**/*.*`,
+        video: `${srcFolder}/video/**/*.*`,
+        audio: `${srcFolder}/audio/**/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
     },
     watch: {
@@ -30,6 +34,8 @@ export const path = {
         scss: `${srcFolder}/scss/**/*.scss`,
         html: `${srcFolder}/**/*.html`,
         files: `${srcFolder}/files/**/*.*`,
+        video: `${srcFolder}/video/**/*.*`,
+        audio: `${srcFolder}/audio/**/*.*`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
     },
     clean: buildFolder,
