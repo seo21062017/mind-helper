@@ -21,6 +21,7 @@ global.app = {
 import {copy} from "./gulp/tasks/copy.js";
 import {video} from "./gulp/tasks/video.js";
 import {audio} from "./gulp/tasks/audio.js";
+import {webfonts} from "./gulp/tasks/webfonts.js";
 import {reset} from "./gulp/tasks/reset.js";
 import {html} from "./gulp/tasks/html.js";
 import {server} from "./gulp/tasks/server.js";
@@ -39,6 +40,7 @@ function watcher() {
     gulp.watch(path.watch.files, copy);
     gulp.watch(path.watch.video, video);
     gulp.watch(path.watch.audio, audio);
+    gulp.watch(path.watch.webfonts, webfonts);
     gulp.watch(path.watch.html, html); // Чтобы автоматически выгружать на сервер gulp.series(html, ftp)
     gulp.watch(path.watch.scss, scss);
     gulp.watch(path.watch.js, js);
@@ -53,7 +55,7 @@ const fonts = gulp.series(otfToTtf, ttfToWoff, fontsStyle);
 
 
 // Основные задачи
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, video, audio));
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, js, images, video, audio, webfonts));
 
 //Построение сценария выполнения задач
 

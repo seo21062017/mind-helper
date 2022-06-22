@@ -1,4 +1,8 @@
 @import "nullStyle.scss";
+@import "fontawesome.scss";
+@import "solid.scss";
+@import "brands.scss";
+
 body{
   font-family: "Roboto Light", sans-serif;
 }
@@ -287,6 +291,14 @@ body{
         margin: 0 0 20px 0;
       }
     }
+    & i {
+      color: white;
+      font-size: 24px;
+      margin: 0 0 0 5px;
+      @media (min-width: 768px){
+        display: none;
+      }
+    }
 
   }
 
@@ -374,3 +386,4 @@ body{
     object-fit: cover;
   }
 }
+

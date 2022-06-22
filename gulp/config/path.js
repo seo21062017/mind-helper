@@ -1,5 +1,6 @@
 // Получаем имя папки проекта
 import * as nodePath from 'path';
+import {webfonts} from "../tasks/webfonts.js";
 const rootFolder = nodePath.basename(nodePath.resolve());
 
 
@@ -15,7 +16,8 @@ export const path = {
         fonts: `${buildFolder}/fonts/`,
         files: `${buildFolder}/files/`,
         video: `${buildFolder}/video/`,
-        audio: `${buildFolder}/audio/`
+        audio: `${buildFolder}/audio/`,
+        webfonts: `${buildFolder}/webfonts/`
 
     },
     src: {
@@ -27,6 +29,7 @@ export const path = {
         files: `${srcFolder}/files/**/*.*`,
         video: `${srcFolder}/video/**/*.*`,
         audio: `${srcFolder}/audio/**/*.*`,
+        webfonts: `${srcFolder}/webfonts/**/*.*`,
         svgicons: `${srcFolder}/svgicons/*.svg`,
     },
     watch: {
@@ -36,6 +39,7 @@ export const path = {
         files: `${srcFolder}/files/**/*.*`,
         video: `${srcFolder}/video/**/*.*`,
         audio: `${srcFolder}/audio/**/*.*`,
+        webfonts: `${srcFolder}/webfonts/**/*.*`,
         images: `${srcFolder}/img/**/*.{jpg,jpeg,png,gif,webp,svg}`,
     },
     clean: buildFolder,
